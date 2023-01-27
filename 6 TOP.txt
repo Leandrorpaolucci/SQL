@@ -1,0 +1,8 @@
+COMANDO TOP
+
+========================================================================
+Basicamente ele irá filtrar e limitar a quantidade de dados de um SELECT
+
+EX:
+SELECT TOP 10 * FROM Person.Person
+========================================================================
