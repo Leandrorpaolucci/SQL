@@ -1,0 +1,39 @@
+COUNT
+==================================================================================
+→ Ele basicamente serve para retornar o números de linhas com a condição definida
+
+SELECT COUNT(*)
+FROM TABELA
+
+→ Tradução Contagem de todas as colunas da tabela
+===================================================================================
+SELECT COUNT(DISTINCT coluna1)
+FROM TABELA
+
+É possivel adicionar o DISTINCT para que retorne a contagem especifica de uma coluna
+e que não contenha valores NULOS dessa coluna
+
+==================================================================================
+SELECT count(*) FROM Person.Person
+
+Resultado: 19972 linhas nessa tabela
+==================================================================================
+SELECT count(title) FROM Person.Person
+1009 
+
+SELECT count( DISTINCT title) FROM Person.Person
+
+Titulos distintos
+===================================================================================
+
+Desafio1 :
+Eu quero saber Quantos produtos temos cadastrados na tabela de produtos Production.product
+
+R: SELECT count(*) FROM Production.Product
+
+Desafio 2:
+Eu quero saber quantos tamanhos de produtos, temos caastrados na nossa tabela
+
+SELECT COUNT(size) FROM Production.Product
+===================================================================================
+
