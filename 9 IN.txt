@@ -1,0 +1,36 @@
+#09 OPERADOR IN
+===================================================================================
+Nós utilizamos o perador IN junto com o WHERE,
+
+para verificar se um valor correspondem com qualquer
+passado na lista de valores.
+===================================================================================
+
+valor IN (valor1, valor2) 
+color ('BLUE', 'RED')
+
+valor IN (valor1, valor2) 
+color ('BLUE', 'RED')
+
+-----------------------------------------------------------------------
+
+SUB-SELECT ou SUB-QUERY
+
+valor IN (valor1, valor2) valor IN (SELECT valor FORM nome_da_tabela)
+-----------------------------------------------------------------------
+EXEMPLO COM IN:
+SELECT * FROM Person.Person WHERE BusinessEntityID IN (2,7,13)
+
+-------------------------------------------------------------------------------------
+EXEMPLO SEM IN
+SELECT * FROM Person.Person 
+WHERE BusinessEntityID = 2 or BusinessEntityID = 7 or BusinessEntityID = 13
+====================================================================================
+
+Podemos utilizar a linha a seguir com NOT:
+EXEMPLO COM NOT IN:
+SELECT * FROM Person.Person WHERE BusinessEntityID NOT IN (2,7,13)
+
+→ ele retorna a consulta removendo esses 3 valores dentro dos parentêses
+
+=====================================================================================

@@ -1,0 +1,35 @@
+SQL Aula LIKE
+
+Vamos dizer que você quer encontrar uma pessoa no banco de daods que você 
+sabe o nome dela era ovi...... alguma coisa
+
+SELECT * 
+FROM Person.Person
+WHERE FirstName like 'ovi%'
+
+SELECT * FROM Person.Person WHERE FirstName like 'ovi%'
+SELECT * FROM Person.Person WHERE FirstName like '%to'
+
+Diferença entre deixar o % no inicio e no final:
+=====================================================================================
+Exemplo nome Paolucci
+
+SELECT * FROM Person.Person WHERE FirstName like 'pao%'
+→ ele vai achar com as iniciais 'pao'
+SELECT * FROM Person.Person WHERE FirstName like '%cci'
+→ ele vai procurar o final da palavra cci
+note a posição do %
+=====================================================================================
+SELECT * FROM Person.Person WHERE FirstName like '%essa%'
+→ ele irá procurar qualquer nome que tenha 'essa' colocando dois %%
+=====================================================================================
+SELECT * FROM Person.Person WHERE FirstName like '%ro_'
+→ ele irá procurar após o e +1 caractere
+
+like não é case sensitive, não tem problema com maiuscula ou minuscula
+=====================================================================================
+
+
+
+
+
