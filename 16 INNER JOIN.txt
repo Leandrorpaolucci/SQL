@@ -1,0 +1,11 @@
+INNER JOIN
+
+INNER JOIN , OUTER JOIN , E SELF-JOIN
+
+→ Tabela Cliente | 
+→ Tabela Endereço
+
+PRIMARY KEY → FORENGKEY
+================================================================
+
+

@@ -1,0 +1,25 @@
+AS
+========================================================================================
+AS = Apelidar colunas sem nome ou renomear colunas das tabelas
+SELECT TOP 10 ListPrice as Preço
+FROM Production.Product
+Se for uma unica palavra não é necessário ""
+agora se for predo do produto é necessário colocar aspas pois é um nome composto
+========================================================================================
+Desafio:
+1) Encontrar o FirstName e LastName person.person (alterar para português) Nome/Sobrenome
+Resolução: SELECT FirstName AS "Primeiro Nome", LastName AS Sobrenome FROM Person.Person
+R: SELECT TOP 10 FirstName AS "Primeiro Nome", LastName AS Sobrenome FROM Person.Person
+
+2) ProductNumber da tabela production.product "Numero do Produto"
+Resolução: SELECT ProductNumber AS "Numero do produto" FROM Production.Product
+R:SELECT TOP 10 ProductNumber AS "Numero do produto" FROM Production.Product
+
+3) Sales.SalesOrderDetail unitePrice "Preço Unitário"
+Resolução: SELECT UnitPrice AS "Preço Unitário" FROM Sales.SalesOrderDetail
+R: SELECT TOP 10 UnitPrice AS "Preço Unitário" FROM Sales.SalesOrderDetail
+===========================================================================================
+
+
+
+

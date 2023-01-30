@@ -1,0 +1,54 @@
+HAVING
+
+O Having é basicamente muito usado em junção com o group by para filtrar resultados de um agrupamento.
+
+
+De uma forma mais simples eu gosto de entender ele como basicamente um WHERE para dados agrupados.
+
+SELECT coluna1, funçãoAgregação(colina2)
+FROM Nome_tabela
+GROUP BY coluna1
+HAVING condição
+==================================================================================================
+IMPORTANTE: 
+
+A grande diferença entre HAVING e WHERE.
+é que o GROUP BY é aplicado depois que os dados ja foram agrupados, 
+enquanto o WHERE é aplicado antes dos dados serem agrupados.
+
+==================================================================================================
+
+Vamos dizer que queremos saber quais nomes no sistema tem uma ocorrencia maior que 10x
+
+SELECT FirstName, count(FirstName) as "Quantidade"
+FROM person.person
+GROUP BY FirstName
+HAVING count(FirstName) > 10
+==================================================================================================
+
+por exemplo nos queremos saber quais produtos que no total de vendas estao entre 162k a 500k
+
+SELECT ProductID, sum(linetotal) as "TOTAL"
+FROM Sales.SalesOrderDetail
+GROUP BY ProductID
+HAVING sum(linetotal) between 162000 and 500000
+
+SELECT FirstName, count(FirstName) as "Quantidade"
+FROM person.person
+WHERE Title = 'Mr.'
+GROUP BY FirstName
+HAVING count(FirstName) > 10
+====================================================================================================
+1. Estamos querendo identificar as provincias(stateProvinceId) com o maior numero de cadastros no nosso sistema,
+entao é preciso encontrar quais provincias (stateProvinceId) estão registradas no banco de dados mais que 1000 vezes
+Resolução: SELECT StateProvinceID, count(StateprovinceID) AS "Qantidade > 1000" FROM Person.Address GROUP BY StateprovinceID HAVING count(StateProvinceID) > 1000
+R: 
+SELECT StateProvinceID, count(StateprovinceID) AS "Qantidade > 1000" FROM Person.Address GROUP BY StateprovinceID HAVING count(StateProvinceID) > 1000
+====================================================================================================
+2. Sendo que se trata de uma multinacional os gerentes querem saber quais produtos
+(provinceId) nao estao trazendo em média no mínimo 1 milhão em total de vendas (line total)
+R: 
+SELECT ProductID, AVG(lineTotal) AS "Produtos/Quantidade < 1M" 
+FROM Sales.SalesOrderDetail GROUP BY ProductID 
+HAVING AVG(linetotal) < 1000000
+====================================================================================================
