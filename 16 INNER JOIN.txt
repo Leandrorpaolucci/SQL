@@ -9,3 +9,36 @@ PRIMARY KEY → FORENGKEY
 ================================================================
 
 
+SELECT p.BusinessEntityID, p.FirstName, p.LastName , pe.EmailAddress
+FROM Person.Person as P
+INNER JOIN Person.EmailAddress PE ON p.BusinessEntityID = PE.BusinessEntityID
+
+================================================================
+
+Vamos Dizer que nós queremos os nomes dos produtos e as informaçoes de suas subcategorias
+
+-- preco do produto (listPrice), nome do produto, nome da subcategoria
+
+SELECT pr.ListPrice, pr.Name, pc.Name AS "Tabela Product-Subcategory"
+FROM Production.Product pr
+INNER JOIN Production.ProductSubcategory PC ON pc.ProductSubcategoryID = PR.ProductSubcategoryID
+===========================================================================================
+
+DESAFIO
+Utilizar INNER JOIN e unir as seguintes informações:
+--BusinessEntityID, name, PhoneNumberTypeId, PhoneNumber
+
+Minha resolução de resposta 10m refletindo aproximadamente:
+SELECT TOP 10 pp.BusinessEntityID, pnt.Name, pp.PhoneNumberTypeID, pp.PhoneNumber
+FROM Person.PersonPhone pp
+INNER JOIN Person.PhoneNumberType pnt ON pnt.PhoneNumberTypeID = pp.PhoneNumberTypeID
+
+Diferença foi nos apelidos, mas não fugiu da logica ^^ uhuuuul 
+------------------------------------------------------------------------------------
+
+R:SELECT TOP 10 pp.BusinessEntityID, pt.Name, pp.PhoneNumberTypeID, pp.PhoneNumber
+FROM Person.PersonPhone pp
+INNER JOIN Person.PhoneNumberType pt ON pt.PhoneNumberTypeID = pp.PhoneNumberTypeID
+======================================================================================
+
+
