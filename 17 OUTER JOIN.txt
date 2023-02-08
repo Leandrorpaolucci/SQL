@@ -1,0 +1,20 @@
+LEFT OUTER JOIN
+→ Espelha o LEFT JOIN
+
+-- Quero descobrir quais pessoas tem um cartão de crédito cadastrado/registrado
+
+SELECT * FROM Person.Person PP
+INNER JOIN Sales.PersonCreditCard PC
+ON PP.BusinessEntityID = PC.BusinessEntityID
+-- INNER JOIN : 19118
+
+SELECT * FROM Person.Person PP
+LEFT JOIN Sales.PersonCreditCard PC
+ON PP.BusinessEntityID = PC.BusinessEntityID
+-- LEFT JOIN 19.972
+
+--Descobrindo quem são as pessoas que não tem cartão
+SELECT * FROM Person.Person PP
+LEFT JOIN Sales.PersonCreditCard PC
+ON PP.BusinessEntityID = PC.BusinessEntityID
+WHERE PC.BusinessEntityID IS NULL

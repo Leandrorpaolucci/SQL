@@ -1,0 +1,13 @@
+O Operador UNION Combina dois ou mais resultados de 
+um SELECT em um resultado apenas.
+
+SELECT COLUNA1, COLUNA2 FROM Tabela1
+UNION → além de juntar a informa ele remove as duplicatas com exceção do UNION ALL
+que junta todos os dados, incluindo os duplicados.
+SELECT Coluna1, Coluna2
+FROM Tabela2
+
+
+
+
+
