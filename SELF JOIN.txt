@@ -1,0 +1,30 @@
+SELF JOIN
+===================================================================================================================
+--USE Northwind
+--SELECT NOME_COLUNA FROM TABELA A, TABELA B
+--WHERE CONDICAO
+
+--CTRL+K E C COMENTA
+
+SELECT * FROM CUSTOMERS
+-- Eu quero todo os clientes que moram na mesma região
+SELECT A.ContactName,A.Region, B.ContactName, B.Region
+FROM CUSTOMERS A, CUSTOMERS B 
+WHERE A.Region = B.Region
+
+-- Eu quero encontrar o nome e data de contração de todos os funcionários que foram contratados ao mesmo ano
+SELECT A.FirstName, A.HireDate, B.FirstName, B.HireDate
+FROM Employees A, Employees B
+WHERE DATEPART(YEAR, A.HireDate) = DATEPART(YEAR, B.HireDate)
+===================================================================================================================
+DESAFIO
+
+Eu quero saber na tabela detalhe do pedido [ORDER DETAILS] Quais produtos
+tem o mesmo percentual de desconto
+
+
+SELECT * FROM [Order Details]
+SELECT A.ProductID, A.Discount, B.ProductID, B.Discount
+FROM [Order Details] A, [Order Details] B WHERE A.Discount = B.Discount
+
+==================================================================================================================

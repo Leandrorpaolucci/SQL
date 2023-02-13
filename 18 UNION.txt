@@ -2,12 +2,36 @@ O Operador UNION Combina dois ou mais resultados de
 um SELECT em um resultado apenas.
 
 SELECT COLUNA1, COLUNA2 FROM Tabela1
+UNION
+que junta todos os dados, incluindo os duplicados.
+SELECT Coluna1, Coluna2
+FROM Tabela2
+===================================================================================
+SELECT COLUNA1, COLUNA2 FROM Tabela1
 UNION → além de juntar a informa ele remove as duplicatas com exceção do UNION ALL
 que junta todos os dados, incluindo os duplicados.
 SELECT Coluna1, Coluna2
 FROM Tabela2
+====================================================================================
+SELECT [ProductID], [Name], [ProductNumber] FROM
+Production.Product WHERE Name like '%Chain%'
+UNION
+SELECT [ProductID], [Name], [ProductNumber] FROM
+Production.Product WHERE Name like '%Decal%'
+Order BY Name
+====================================================================================
+SELECT FirstName, Title, MiddleName FROM Person.Person WHERE Title = 'Mr.'
+UNION
+SELECT FirstName, Title, MiddleName FROM Person.Person WHERE MiddleName = 'A'
+=====================================================================================
+SELECT FirstName, Title, MiddleName FROM Person.Person WHERE Title = 'Mr.'
+UNION
+SELECT FirstName, Title, MiddleName FROM Person.Person WHERE MiddleName = 'A'
 
-
+SELECT FirstName FROM Person.Person  WHERE FirstName = 'Gustavo'
+UNION
+SELECT LastName FROM Person.Person WHERE LastName = 'Adams'
+====================================================================================
 
 
 
