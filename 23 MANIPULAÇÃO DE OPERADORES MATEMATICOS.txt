@@ -1,0 +1,22 @@
+OPERADORES !!
+
+SELECT * FROM Sales.SalesOrderDetail
+
+-- OPERADORES
+SELECT UnitPrice + LineTotal FROM sales.SalesOrderDetail
+SELECT UnitPrice - LineTotal FROM sales.SalesOrderDetail
+SELECT UnitPrice * LineTotal FROM sales.SalesOrderDetail
+SELECT UnitPrice / LineTotal FROM sales.SalesOrderDetail
+
+-- OPERADORES AVG = MÉDIA | SUM = SOMA | MIN = MINIMO | MAX = MÁXIMO
+SELECT AVG(LineTotal) FROM Sales.SalesOrderDetail
+SELECT SUM(LineTotal) FROM Sales.SalesOrderDetail
+SELECT MIN(LineTotal) FROM Sales.SalesOrderDetail
+SELECT MAX(LineTotal) FROM Sales.SalesOrderDetail
+
+--ROUND SELECT ROUND(coluna/informação, arredondamento) ex:
+SELECT ROUND(LineTotal, 2) AS Arrendondamento FROM Sales.SalesOrderDetail 
+SELECT ROUND(LineTotal, 2), LineTotal AS Arrendondamento FROM Sales.SalesOrderDetail 
+
+-- RAIZ QUADRADA
+SELECT SQRT(LineTotal) FROM Sales.SalesOrderDetail

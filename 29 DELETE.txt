@@ -1,0 +1,11 @@
+
+
+DELETE FROM nomeTabela
+
+
+→ Como UPDATE, é importante colocar a condição!!!
+WHERE CONDIÇÃO
+
+DELETE FROM Aula WHERE nome = 'Mudei' → Apagar a LINHA ESPECIFICA COM WHERE
+
+SE NÃO TIVER O WHERE ELE APAGA TUDO :O

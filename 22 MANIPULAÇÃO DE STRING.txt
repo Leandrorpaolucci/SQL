@@ -1,0 +1,12 @@
+SELECT * FROM Person.Person
+
+
+SELECT CONCAT(FirstName,LastName) FROM Person.Person
+SELECT CONCAT(FirstName,' ' ,LastName) FROM Person.Person
+
+SELECT UPPER(FirstName) FROM Person.Person
+SELECT LOWER(FirstName) FROM Person.Person
+SELECT FirstName, LEN(FirstName) as 'qtde caractere' FROM Person.Person
+SELECT FirstName, SUBSTRING(FirstName, 1 , 3) AS 'Começa no x e para no Y' FROM Person.Person
+SELECT * FROM Production.Product
+SELECT ProductNumber, REPLACE(ProductNumber, '-', '#') AS 'Substitui o - por #' FROM Production.Product

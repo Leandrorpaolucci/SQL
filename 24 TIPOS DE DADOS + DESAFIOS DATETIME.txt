@@ -1,0 +1,42 @@
+Tipos diferentes de dados no SQL SERVER
+
+1 - BOLEANOS
+2 - CARACTERES
+3 - NUMÉRICOS
+4 - TEMPORAIS
+
+#1 Boleanos
+→ Por padrão ele é inicializado como nulo, e pode receber tanto 1 ou 0
+tipo: BIT
+
+#Caracteres
+→ Tamanho FIXO - CHAR | Permite inserir uma quatidade fixa de caracteres e sempre ocupa todo o espaço reservado 10/50
+→ Defini 50, ele sempre ocupará 50, independente se você utilizar 10/50
+
+→→→→ Tamanho Variável ←←←←←←←←
+→ Tamanho variavel, VARCHAR OU NVARCHAR | Permite inserir até uma quantidade que for definida, porem só usa o espaço que for preenchido 10/50
+→ ele só utiliza o tamanho inserido sem a necessidade de gastar mémoria com espaços vazios, ex:
+→ Leandro Ribeiro/50, ele só utiliza para as letras Leandro Ribeiro, não ocupa o restante de casas vazias.
+
+#Numeros
+→ 1. Valores exatos
+→ TINYINT - Não tem o valor fracionado (float - 1.43m 24.23) somente valor inteiro
+→ SMALLINT - Mesma coisa porem possui um valor maior que o anterior
+→ INT - Mesma coisa porem limite maior que o anterior
+→ BIGINT → mesma coisa com um limite maior que o anterior
+
+NUMERIC OU DECIMAL - Valores exatos, porem permite ter parte fracionados, que também pode ser especifico a precisão e escala (escala é o número
+de digitos na parte fracional) -ex: NUMERIC (5,2) 113,44
+
+
+Valores Aproximados:
+1. REAL tem precisão aproximada de até 15 digitos.
+2. FLOAT - mesma coisa que o REAL
+
+#4. Temporais
+DATE - ARMAZENA A DATA NO FORMADO DE AAAA/MM/DD
+DATETIME - Armazena Data e horas no formado aaaa/mm/dd:hh:mm:ss
+DATETIME2 - Data e horas com adição dos milissegundos no formato  aaaa/mm/dd:hh:mm:sssssss
+SMALLDATETIME - Data e hora, respeitando o limite entre '1900-01-01:00:00:00' até '2079-06-06:23:59:59'
+TIME - Horas, Minutos, segundos e milissegundos. Respeitando o limite de '00:00:00.00000000000' to '23:59:59.99999999'
+DATETIMEOFSET - Permite armazenar informações de data e hora incluindo o FUSO horário

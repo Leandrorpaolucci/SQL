@@ -1,0 +1,20 @@
+CREATE TABLE CarteiraMotorista (
+	Id int NOT NULL,
+	Nome VARCHAR(255) NOT NULL,
+	Idade INT CHECK (IDADE >= 18),
+	CodigoCNH INT NOT NULL UNIQUE
+);
+
+
+SELECT * FROM CarteiraMotorista
+
+
+INSERT INTO CarteiraMotorista (id, nome, idade, CodigoCNH) VALUES (1 , 'Leandro', 27, 123456789)
+
+SELECT * FROM CarteiraMotorista
+
+TRUNCATE TABLE CarteiraMotorista
+
+INSERT INTO CarteiraMotorista (id, nome, idade, CodigoCNH) VALUES (1 , 'Leandro', 27, 123456789)
+SELECT * FROM CarteiraMotorista
+INSERT INTO CarteiraMotorista (id, nome, idade, CodigoCNH) VALUES (1 , 'Leandro', 27, 12345678)

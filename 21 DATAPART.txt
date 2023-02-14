@@ -1,0 +1,19 @@
+DATEPART | DATAS 
+
+https://learn.microsoft.com/pt-br/sql/t-sql/functions/datepart-transact-sql?view=sql-server-ver16
+
+SELECT * FROM Sales.SalesOrderHeader
+
+SELECT SalesOrderID, DATEPART(Month, OrderDate) as Média FROM Sales.SalesOrderHeader
+
+SELECT AVG(TotalDue) as Média, DATEPART(Month, OrderDate) as Mês FROM Sales.SalesOrderHeader GROUP BY DATEPART(Month,Orderdate) Order BY Mês
+
+SELECT AVG(TotalDue)as Média, DATEPART(Year, OrderDate) as Mês FROM Sales.SalesOrderHeader GROUP BY DATEPART(Year,Orderdate) Order BY Mês
+
+SELECT AVG(TotalDue)as Média, DATEPART(Day, OrderDate) as Mês FROM Sales.SalesOrderHeader GROUP BY DATEPART(Day,Orderdate) Order BY Mês
+
+
+
+
+
+

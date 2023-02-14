@@ -1,0 +1,24 @@
+→ INSERT INTO
+
+INSERT INTO nome_da_tabela (coluna1, coluna2, ...) VALUES (valor1, valor2)
+
+INSERT INTO TABELAA (COLUNA1)
+SELECT COLUNA2
+FROM TABELAB
+****************************************************************
+CREATE TABLE Aula (
+id INT,
+Nome VARCHAR(150)
+)
+**************************
+INSERT INTO Aula(id, nome)
+Values (2, 'Aula 2'),
+(3, 'Aula 3'),
+(4, 'Aula 4');
+
+SELECT * FROM Aula
+
+SELECT * INTO TabelaNova FROM Aula
+
+SELECT * FROM TabelaNova
+**************************

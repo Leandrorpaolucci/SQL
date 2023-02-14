@@ -1,0 +1,29 @@
+
+
+Nessa Aula vamos aprender a  criar restrições, forçam com que nao seja possivel inserir dados em uma tabela sem preencher a coluna
+marcada como NOT NULL
+
+→ SINTAXE
+
+CREATE TABLE CarteiraMotorista (
+	Id int NOT NULL,
+	Nome VARCHAR(255) NOT NULL,
+	Idade INT CHECK (IDADE >= 18)
+);
+
+
+CREATE TABLE CarteiraMotorista (
+	Id int NOT NULL,
+	Nome VARCHAR(255) NOT NULL,
+	Idade INT CHECK (IDADE >= 18)
+);
+
+
+SELECT * FROM CarteiraMotorista
+
+
+INSERT INTO CarteiraMotorista (id, nome, idade) VALUES (1 , 'Leandro', 27)
+
+SELECT * FROM CarteiraMotorista
+
+TRUNCATE TABLE CarteiraMotorista

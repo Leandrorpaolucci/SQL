@@ -1,0 +1,18 @@
+
+
+UPDATE nomeTabela
+
+SET 	Coluna1 = Valor1
+	Coluna2 = Valor2
+
+
+→ IMPORTANTE PASSAR O WHERE PARA NAO SOBRESCREVER TODOS OS DADOS DO BANCO DE DADOS !!!
+WHERE Condição
+
+SELECT * FROM Aula
+
+UPDATE Aula SET nome = 'Teste'
+
+
+UPDATE Aula
+SET nome = 'Mudei' WHERE id = 3

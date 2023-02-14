@@ -1,0 +1,24 @@
+
+
+Nessa aula vamos aprender a criar restriçoes de valores que podem ser inseridos em uma tabela em banco de dados quando você esta criando
+uma tabela nova
+
+→ SINTAXE
+
+CREATE TABLE CarteiraMotorista (
+	Id int NOT NULL,
+	Nome VARCHAR(255) NOT NULL,
+	Idade INT CHECK (IDADE >= 18)
+);
+
+
+SELECT * FROM CarteiraMotorista
+
+
+INSERT INTO CarteiraMotorista (id, nome, idade) VALUES (1 , 'Leandro', 17)
+Mensagem 547, Nível 16, Estado 0, Linha 11
+A instrução INSERT conflitou com a restrição do CHECK "CK__CarteiraM__Idade__71D1E811". O conflito ocorreu no banco de dados "Northwind", tabela "dbo.CarteiraMotorista", column 'Idade'.
+A instrução foi finalizada.
+
+Horário de conclusão: 2023-02-13T21:14:02.8215740-03:00
+

@@ -1,0 +1,18 @@
+
+
+Nessa aula iremos aprender como usar views, que sao tabelas criadas para consulta onde você usa outras tabelas como base para criar uma
+nova tabela de pesquisa com apenas dados específicos que voce precisa de uma tabela.
+
+→ SINTAXE
+
+CREATE VIEW [Pessoa Simplificado] AS 
+SELECT FirstName, MiddleName, LastName
+FROM Person.person
+WHERE Title = 'Ms.'
+
+CREATE VIEW [Pessoa Simplificado] AS 
+SELECT FirstName, MiddleName, LastName
+FROM Person.person
+WHERE Title = 'Ms.'
+
+SELECT  * FROM [Pessoa Simplificado]

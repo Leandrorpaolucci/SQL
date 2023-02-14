@@ -1,0 +1,45 @@
+
+
+ALTER TABLE NomeDaTabela
+
+AÇÃO/CONDIÇÕES
+
+→ Add, Remover Or alterar uma coluna
+→ Setar valores padrões para uma coluna
+→ Add ou Remover Restrições de colunas
+→ Renomear uma tabela
+
+
+CREATE TABLE Youtube (
+id INT PRIMARY KEY,
+Nome VARCHAR(150) NOT NULL UNIQUE,
+Categoria VARCHAR(200) NOT NULL,
+DataCriacao DATETIME NOT NULL
+);
+-- Olhando todas as colunas
+SELECT * FROM Youtube
+-- Adicionando o uma nova coluna
+ALTER TABLE Youtube add ativo bit
+-- veriricando a tabela nova
+SELECT * FROM Youtube
+-- Alterando a quantidade de caractere de uma coluna
+ALTER TABLE Youtube ALTER COLUMN Categoria VARCHAR(300) NOT NULL
+-- Verificando
+SELECT * FROM Youtube
+-- Alterando o nome de uma coluna
+-- EXEC sp_rename 'NomeTabela.NomecolunaAtual', 'NomeColunaNova', 'COLUMN'
+--SELECT * FROM Youtube Antes
+EXEC sp_rename 'youtube.nome', 'NomeCanal', 'COLUMN'
+-- Após alteração 
+SELECT * FROM Youtube2
+-- ALTERAR O NOME DA TABELA
+EXEC sp_Rename 'Youtube', 'Youtube2'
+-- SELECT * FROM Youtube
+SELECT * FROM Youtube2
+EXEC sp_Rename 'Youtube2', 'Youtube'
+SELECT * FROM Youtube
+
+
+
+
+

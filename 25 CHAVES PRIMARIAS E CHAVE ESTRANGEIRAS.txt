@@ -1,0 +1,21 @@
+Vamos aprender o que são chaves primarias e estrangeiras
+Vamos ver exemplos de como usar eles para criar colunas e tabelas, porem vamos ver isso em detalhes na aula de criação de tabelas
+
+
+→ Uma chave primária é basicamente uma coluna ou grupo de colunas, usada para indentificar inicamente uma linha em uma tabela
+→ voce consegue criar essas chaves primarias, através que restrições (ou contraints em inglês) que sao regras que voce define quando está
+criando uma coluna
+→ Assim quando voce faz isso, você esta criando um indice unico para aquela tabela ou coluna ou grupo de colunas
+
+****************************************************************************************************************************************
+**********************************                   Chave Estrangeira  ****************************************************************
+
+Uma chave estrangeira é uma coluna ou grupo de colunas em uma tabela que indentifica unicamente uma linha em outra tabela
+
+Ou seja, uma chave estrangeira é definida em uma tabela onde ela é apenas uma referência e nao contem todos os dados ali
+
+entao uma chave estrangeira é simplesmente uma coluna ou grupo de colunas que é uma chave primária ou em outra tabela
+Uma tabela que contem a chave estrangeira é chamada de uma tabela referenciadora ou tabela filho. e a tabela na qual a chave
+estrangeira é referenciada é chamada de tabela referenciada ou tabela pai
+Uma tabela pode ter mais de uma cahve estrangeira dependendo do seu relacionamento com as outras tabelas
+****************************************************************************************************************************************
